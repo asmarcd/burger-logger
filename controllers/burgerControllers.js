@@ -6,7 +6,7 @@ const burger = require("../models/burger.js");
 router.get("/", (req, res) => {
     burger.all((data) => {
         let hbsObject = {
-            bugers: data
+            burgers: data
         };
         res.render("index", hbsObject);
     });
@@ -45,3 +45,5 @@ router.delete("/api/burgers/:id", (req, res) => {
         }
     });
 });
+
+module.exports = router;

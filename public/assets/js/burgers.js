@@ -1,7 +1,7 @@
 $(function () {
     $(".change-eaten").on("click", function (event) {
         var id = $(this).data("id");
-        var newSleep = $(this).data("iseaten");
+        var isEaten = $(this).data("iseaten");
 
         var newEatenState = {
             eaten: isEaten
@@ -21,7 +21,7 @@ $(function () {
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
 
-        var newBuger = {
+        var newBurger = {
             name: $("#ca").val().trim(),
             eaten: $("[name=eaten]:checked").val().trim()
         };
