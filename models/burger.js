@@ -6,7 +6,7 @@ const burger = {
             cb(res);
         });
     },
-    create: (cols, vals, cb) {
+    create: (cols, vals, cb) => {
         orm.create("burgers", cols, vals, (res) => {
             cb(res);
         });
